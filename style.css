@@ -5,33 +5,36 @@ img {
 }
 
 *{
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
 }
 .cima{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 80px;
+    height: 80px;
 }
 .conteudo{
-    max-width: 1200px; /* largura máxima */
-    margin: 0 auto;    /* centraliza */
-    padding: 0 40px;   /* espaço interno lateral */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
 }
 /* LOGO */
 .cima img{
-    height: 40px;
+    height: 36px;
 }
-
 /* MENU CENTRAL */
 .opcoes{
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 32px;
 }
 
 /* ITENS */
@@ -47,38 +50,43 @@ body {
 }
 
 /* DIREITA */
-.separada{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
 .opcoes h2{
     transition: 0.3s;
 }
-.separada h2{
-    color: gray;
-    transition: 0.3s;
-    font-size: 17px;
-    cursor: pointer
+/* DIREITA */
+.separada{
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
+
+.separada h2{
+    font-size: 15px;
+    font-weight: 500;
+    color: #4b5563;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
 .separada h2:hover{
     color: black;
 }
 
 /* BOTÃO */
 .separada button{
-    background-color:#5850ec;
-    border-radius: 5px;
+    background: #5850ec;
     color: white;
-    border: 0;
-    height: 40px;
-    width: auto;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
-    padding: 0 15px;
+    transition: 0.2s;
 }
 
 .separada button:hover{
-    background-color: #6c65f0;
+    background: #4338ca;
 }
 /*=============================*/
 section span{
@@ -87,7 +95,7 @@ section span{
 section {
     margin-top: 100px;
     max-width: 1200px;
-    margin: 100px auto 0; /* centraliza */
+    margin: 100px auto 0;
     padding: 0 40px;
     text-align: center;
 }
@@ -171,19 +179,16 @@ section p{
 
 
 .stats-wrapper {
-    display: flex;
-    justify-content:center;
-    margin-top:-150px;
+    max-width: 1200px;
+    margin: -150px auto 0;
+    padding: 0 40px;
 }
 
 .stats-wrapper img {
-    max-width: 900px;
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
-
 
 .conteudo {
     max-width: 1200px;
@@ -191,69 +196,112 @@ section p{
     padding: 0 40px;
 }
 
+.menu-item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
 
+.menu-item h2{
+    font-size: 15px;
+    font-weight: 500;
+    color: #4b5563;
+    transition: 0.2s;
+}
+
+.menu-item span{
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+.menu-item:hover h2,
+.menu-item:hover span{
+    color: black;
+}
 
 @media (max-width: 768px) {
-    .opcoes {
+
+    /* HEADER */
+    .conteudo{
+        padding: 0 20px;
+    }
+
+    .cima{
+        height: 72px;
+        padding: 0;
+    }
+
+    .cima img{
+        height: 28px;
+    }
+
+    /* ESCONDE MENU */
+    .opcoes{
         display: none;
     }
 
-    .cima {
-        padding: 15px 20px;
+    /* DIREITA */
+    .separada{
+        gap: 12px;
     }
 
-    .separada h2 {
-        display: none; 
+    .separada h2{
+        display: none;
     }
 
-    .separada button {
-        width: auto;
-        padding: 10px 15px;
+    .separada button{
+        padding: 10px 14px;
         font-size: 14px;
-    }
-    .cima img {
-        height: 30px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .hero {
-        padding: 60px 20px;
+        border-radius: 6px;
     }
 
-    .hero h1 {
-        font-size: 34px;
-        line-height: 1.2;
+    /* HERO */
+    .hero{
+        padding: 50px 20px 40px;
     }
 
-    .hero p {
-        font-size: 16px;
+    .hero h1{
+        font-size: 36px;
+        line-height: 1.15;
+        margin-bottom: 18px;
     }
-}
 
-@media (max-width: 768px) {
-    .hero-btns {
+    .hero p{
+        font-size: 17px;
+        line-height: 1.6;
+        margin-bottom: 28px;
+    }
+
+    /* BOTÕES */
+    .hero-btns{
         flex-direction: column;
-        gap: 10px;
+        width: 100%;
+        gap: 12px;
+        margin-bottom: 50px;
     }
 
     .btn-primary,
-    .btn-outline {
+    .btn-outline{
         width: 100%;
-        padding: 15px;
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    /* ESTATÍSTICAS */
+    .stats-wrapper{
+        margin-top: -30px;
+        padding: 0 20px 40px;
+    }
+
+    .stats-wrapper img{
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    /* SECTION */
+    section{
+        padding: 0 20px;
     }
 }
-
-@media (max-width: 768px) {
-    .stats-wrapper {
-        margin-top: -40px;
-        padding: 0 15px;
-    }
-
-    .stats-wrapper img {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
