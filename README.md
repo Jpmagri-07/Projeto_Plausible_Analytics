@@ -29,6 +29,8 @@ O objetivo é recriar a interface visual da plataforma, focando na estrutura, de
 
 ## 👥 Integrantes
 Projeto desenvolvido em dupla como atividade escolar.
+- João Pedro Magri Martins | Github: Jpmagri-07
+- Miguel Perino | Github: MiguelPerino
 
 ---
 
@@ -40,7 +42,10 @@ Projeto desenvolvido em dupla como atividade escolar.
 ---
 
 ## 📷 Preview do Projeto
-<!-- Adicione aqui imagens ou prints do seu site -->
+
+<p align="center">
+  <img src="imgs/imagem.png" alt="Preview do Projeto" width="100%">
+</p>
 
 ---
 
