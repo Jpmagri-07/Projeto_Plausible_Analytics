@@ -188,7 +188,7 @@ function carregarFavoritosDoLocalStorage() {
 
 // Mostra a lista de favoritos salvos na tela
 function mostrarFavoritos() {
-  contadorFavoritos.textContent = favoritos.length;
+
   areaFavoritos.innerHTML = '';
 
   if (favoritos.length === 0) {
