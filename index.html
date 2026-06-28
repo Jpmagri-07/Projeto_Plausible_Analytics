@@ -22,7 +22,7 @@
                         <h2>Why Plausible</h2>
                         <span>⌄</span>
                     </div>
-                    <div class="menu-item">
+                    <div class="menu-item" data-target="demo">
                         <h2>Resources</h2>
                         <span>⌄</span>
                     </div>
@@ -41,7 +41,7 @@
             <p>Plausible is powerful, lightweight analytics. No cookies, just insights. Made and hosted in the EU, powered by European-owned infrastructure. 🇪🇺</p>
             <div class="hero-btns">
                 <button class="btn-primary">Start free trial</button>
-                <button class="btn-outline">View live demo</button>
+                <button class="btn-outline" data-target="demo">View live demo</button>
             </div>
         </section>
     </div>
@@ -49,5 +49,60 @@
         <img src="imgs/estatisticas-imagem.png" alt="estatisticas em imagem">
     </section>
 
+    
+    <!--Busca de conteúdo (consumo de API JSON com parâmetros) -->
+    <section id="demo" class="demo-section">
+        <div class="conteudo">
+            <span class="section-tag">Live demo</span>
+            <h2>Métricas reais de qualquer projeto open source</h2>
+            <p class="section-subtitle">
+                Assim como o Plausible mostra analytics do seu site, aqui você pesquisa qualquer
+                projeto open source na API do GitHub e consegue ver estrelas, forks e
+                linguagem do site em tempo real. Salve os que mais gostar como favoritos.
+            </p>
+
+            <form id="search-form" class="search-form" novalidate>
+                <div class="form-group form-group-grow">
+                    <label for="search-input">Buscar repositório</label>
+                    <input
+                        type="text"
+                        id="search-input"
+                        name="query"
+                        placeholder="Ex: analytics, react, machine learning..."
+                        autocomplete="off"
+                    >
+                    <span class="error-message" id="search-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="search-limit">Quantidade</label>
+                    <select id="search-limit" name="limit">
+                        <option value="6">6 resultados</option>
+                        <option value="12" selected>12 resultados</option>
+                        <option value="24">24 resultados</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary" id="search-btn">Buscar</button>
+            </form>
+
+            <div id="search-status" class="search-status" aria-live="polite"></div>
+
+            <div id="results-grid" class="results-grid"></div>
+        </div>
+    </section>
+
+    <!-- Salvar favoritos + Lista de favoritos (localStorage) -->
+    <section id="favoritos" class="favorites-section">
+        <div class="conteudo">
+            <h2>⭐ Meus repositórios favoritos <span class="favorites-badge" id="favorites-count">0</span></h2>
+            <p id="favorites-empty" class="favorites-empty">
+                Você ainda não salvou nenhum favorito. Busque algo acima e clique em "☆ Favoritar".
+            </p>
+            <div id="favorites-grid" class="results-grid"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
