@@ -69,7 +69,7 @@ Projeto desenvolvido em dupla como atividade escolar.
 ## 📷 Preview do Projeto
 
 <p align="center">
-  <img src="imgs/site-miguel01.png" alt="Preview do Projeto" width="100%">
+  <img src="imgs/site-miguel01.PNG" alt="Preview do Projeto" width="100%">
 </p>
 
 ---
