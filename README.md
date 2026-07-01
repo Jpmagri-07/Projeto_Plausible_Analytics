@@ -70,6 +70,7 @@ Projeto desenvolvido em dupla como atividade escolar.
 
 <p align="center">
   <img src="imgs/site-miguel01.PNG" alt="Preview do Projeto" width="100%">
+  <img src="imgs/site-miguel02.PNG" alt="Preview do Projeto" width="100%">
 </p>
 
 ---
